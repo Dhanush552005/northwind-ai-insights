@@ -9,6 +9,7 @@ function Navbar() {
   const navLinks = [
     { path: "/", label: "Dashboard" },
     { path: "/ai", label: "AI Assistant" },
+    { path: "/add-data", label: "Add Data" }
   ];
 
   return (

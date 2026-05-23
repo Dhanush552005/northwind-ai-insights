@@ -4,6 +4,7 @@ from sqlalchemy import text
 from database import engine
 from routes.dashboard_routes import router as dashboard_router
 from routes.ai_routes import router as ai_router
+from routes.customer_routes import router as customer_router
 
 app = FastAPI(title="Northwind AI Insights API")
 
@@ -17,6 +18,7 @@ app.add_middleware(
 
 app.include_router(dashboard_router)
 app.include_router(ai_router)
+app.include_router(customer_router)
 
 @app.get("/")
 def home():

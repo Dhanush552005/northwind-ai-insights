@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
 import AiAssistant from "./pages/AiAssistant";
+import AddData from "./pages/AddData";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/ai" element={<AiAssistant />} />
+                <Route path="/add-data" element={<AddData />} />
               </Routes>
             </div>
           </main>

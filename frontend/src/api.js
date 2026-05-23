@@ -23,3 +23,19 @@ export async function askAI(question) {
 
   return response.json();
 }
+
+export async function addCustomer(customer) {
+  const response = await fetch(`${API_BASE_URL}/customers/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(customer),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to add customer");
+  }
+
+  return response.json();
+}
